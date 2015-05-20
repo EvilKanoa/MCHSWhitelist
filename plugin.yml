@@ -1,0 +1,27 @@
+name: MCHSWhitelist
+version: 1.0
+main: ca.kanoa.whitelist.Whitelist
+
+author: EvilKanoa
+
+permissions:
+    whitelist.reload:
+        description: Allows use of the command to reload the whitelist.
+        default: op
+    whitelist.check:
+        description: Allows use of the command to check if someone is whitelisted.
+        default: op
+
+commands:
+    reloadwhitelist:
+        description: Reloads the whitelist from the custom whitelist file.
+        usage: /<command>
+        aliases: [whitelistreload, reloadwl, rwl]
+        permission: whitelist.reload
+        permission-message: You don't have permission!
+    iswhitelisted:
+        description: Checks if a user is whitelisted.
+        usage: /<command> <user>
+        aliases: [iswl]
+        permission: whitelist.check
+        permission-message: You don't have permission!
